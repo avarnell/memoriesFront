@@ -1,0 +1,1 @@
+Cloud Foundry URL : g12-andrew-varnell-memories-client.cfapps.io
