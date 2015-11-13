@@ -1,0 +1,28 @@
+    <div class='col-md-4'>
+      <h2>Years</h2>
+      <div ng-repeat='year in years'>
+        <p>{{year.year}}</p>
+      </div>
+
+    </div>
+
+    <div class='col-md-8'>
+      <h2>User memories</h2>
+      <div class="memory col-md-8 col-md-offset-2" ng-repeat='memory in memories'>
+        <div class='col-md-3'>
+          <p class='year'>{{memory.attributes.year}}</p>
+        </div> 
+
+        <div class='col-md-9'>
+          <div>
+            <h3>{{memory.attributes.old_days}}</h3>
+          </div>
+          <div>
+            <h4>But now...</h4>
+          </div>
+          <div>
+            <h3>{{memory.attributes.these_days}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>

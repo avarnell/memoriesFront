@@ -4,7 +4,10 @@ memories.controller('memoriesCtrl', ['$scope', '$http', function($scope, $http){
   $scope.works = 'It Does!'
   $http.get('http://g12-varnell-andrew-memories.cfapps.io/api/v1/memories').success(function(response){
     $scope.memories = response.data
-    console.log(response)
+  })
+
+  $http.get('http://g12-varnell-andrew-memories.cfapps.io/api/v1/memories/years').success(function(response){
+    $scope.years = response.data
   })
 
   $scope.addMemory = function(){
@@ -16,7 +19,7 @@ memories.controller('memoriesCtrl', ['$scope', '$http', function($scope, $http){
         }}}
 
     $http.post('http://g12-varnell-andrew-memories.cfapps.io/api/v1/memories', memory).success(function(response){
-      console.log(response)
+
     })
   }
 

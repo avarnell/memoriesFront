@@ -31,26 +31,9 @@
         <button class='btn btn-primary' ng-click='addMemory()'> Add Memory</button>
       </form>
     </div>
-    <div class='col-md-12'>
-      <h2>User memories</h2>
-      <div class="memory col-md-8 col-md-offset-2" ng-repeat='memory in memories'>
-        <div class='col-md-3'>
-          <p class='year'>{{memory.attributes.year}}</p>
-        </div> 
 
-        <div class='col-md-9'>
-          <div>
-            <h3>{{memory.attributes.old_days}}</h3>
-          </div>
-          <div>
-            <h4>But now...</h4>
-          </div>
-          <div>
-            <h3>{{memory.attributes.these_days}}</h3>
-          </div>
-        </div>
-      </div>
-    </div>
+   <div ng-view>
+   </div>
 
   </div>
 
