@@ -13,28 +13,44 @@
   <div class="container">
     <h1>When I was a kid...</h1>
 
-    <div class="memory col-md-8 col-md-offset-2" ng-repeat='memory in memories'>
-      <div class='col-md-3'>
-        <p class='year'>{{memory.attributes.year}}</p>
-      </div> 
+    <h2>Add a new memory</h2>
+    <div class='col-md-6 col-md-offset-3'>   
+      <form >
+        <div class='form-group'>
+          <label for='old_days'>old days</label>
+          <input class='form-control' type='text' ng-model='old_days' id='old_days'>
+        </div>
+        <div class='form-group'>
+          <label for='these_days'>these days</label>
+          <input class='form-control' type='text' ng-model='these_days' id='these_days'>
+        </div>
+        <div class='form-group'>
+          <label for='year'>year</label>
+          <input class='form-control' type='number' ng-model='year' id='year'>
+        </div>
+        <button class='btn btn-primary' ng-click='addMemory()'> Add Memory</button>
+      </form>
+    </div>
+    <div class='col-md-12'>
+      <h2>User memories</h2>
+      <div class="memory col-md-8 col-md-offset-2" ng-repeat='memory in memories'>
+        <div class='col-md-3'>
+          <p class='year'>{{memory.attributes.year}}</p>
+        </div> 
 
-      <div class='col-md-9'>
-        <div>
-          <h3>{{memory.attributes.old_days}}</h3>
-        </div>
-        <div>
-          <h4>But now...</h4>
-        </div>
-        <div>
-          <h3>{{memory.attributes.these_days}}</h3>
+        <div class='col-md-9'>
+          <div>
+            <h3>{{memory.attributes.old_days}}</h3>
+          </div>
+          <div>
+            <h4>But now...</h4>
+          </div>
+          <div>
+            <h3>{{memory.attributes.these_days}}</h3>
+          </div>
         </div>
       </div>
-
-      
-
-
     </div>
-    
 
   </div>
 
