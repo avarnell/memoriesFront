@@ -7,9 +7,36 @@
   <script type="text/javascript" src='/js/app.js' ></script>
   <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/app.css">
+  <base href="/">
 </head>
 <body ng-controller='memoriesCtrl'>
-  <h1>Running</h1>
-  <h2>{{works}}</h2>
+  <div class="container">
+    <h1>When I was a kid...</h1>
+
+    <div class="memory col-md-8 col-md-offset-2" ng-repeat='memory in memories'>
+      <div class='col-md-3'>
+        <p class='year'>{{memory.attributes.year}}</p>
+      </div> 
+
+      <div class='col-md-9'>
+        <div>
+          <h3>{{memory.attributes.old_days}}</h3>
+        </div>
+        <div>
+          <h4>But now...</h4>
+        </div>
+        <div>
+          <h3>{{memory.attributes.these_days}}</h3>
+        </div>
+      </div>
+
+      
+
+
+    </div>
+    
+
+  </div>
+
 </body>
 </html>
